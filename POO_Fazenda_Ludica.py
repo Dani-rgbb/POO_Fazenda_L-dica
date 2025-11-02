@@ -1,6 +1,6 @@
 # Classe base: Animal
 class Animal:
-    def _init_(self, nome, idade):
+    def __init__(self, nome, idade):
         self.nome = nome
         self.idade = idade
 
@@ -12,8 +12,8 @@ class Animal:
 
 # Subclasse: Cachorro
 class Cachorro(Animal):
-    def _init_(self, nome, idade, raca):
-        super()._init_(nome, idade)
+    def __init__(self, nome, idade, raca):
+        super().__init__(nome, idade)
         self.raca = raca
 
     def emitir_som(self):
@@ -21,8 +21,8 @@ class Cachorro(Animal):
 
 # Subclasse: Gato
 class Gato(Animal):
-    def _init_(self, nome, idade, cor_pelo):
-        super()._init_(nome, idade)
+    def __init__(self, nome, idade, cor_pelo):
+        super().__init__(nome, idade)
         self.cor_pelo = cor_pelo
 
     def emitir_som(self):
@@ -30,8 +30,8 @@ class Gato(Animal):
 
 # Subclasse: Vaca
 class Vaca(Animal):
-    def _init_(self, nome, idade, producao_leite_litros):
-        super()._init_(nome, idade)
+    def __init__(self, nome, idade, producao_leite_litros):
+        super().__init__(nome, idade)
         self.__producao_leite_litros = producao_leite_litros  # Encapsulamento
 
     def emitir_som(self):
